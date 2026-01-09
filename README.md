@@ -1,5 +1,4 @@
-Here’s a **reworded version of your README** with the same meaning, cleaner flow, and fresh wording—perfect for submission or GitHub 👌
-(Tech details and intent stay intact.)
+
 
 ---
 
