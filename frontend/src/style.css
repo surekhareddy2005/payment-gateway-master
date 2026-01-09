@@ -1,0 +1,48 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  padding: 30px;
+}
+
+[data-test-id="dashboard"] {
+  background: #ffffff;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+[data-test-id="api-credentials"] div {
+  margin-bottom: 10px;
+}
+
+[data-test-id="stats-container"] {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+[data-test-id="stats-container"] div {
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 4px;
+  min-width: 100px;
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background: #f0f0f0;
+}
