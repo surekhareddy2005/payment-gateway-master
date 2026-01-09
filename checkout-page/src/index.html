@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div data-test-id="checkout-container">
+
+  <!-- Order Summary -->
+  <div data-test-id="order-summary">
+    <h2>Complete Payment</h2>
+    <div>
+      <span>Amount: </span>
+      <span data-test-id="order-amount">₹0</span>
+    </div>
+    <div>
+      <span>Order ID: </span>
+      <span data-test-id="order-id"></span>
+    </div>
+  </div>
+
+  <!-- Payment Method Selection -->
+  <div data-test-id="payment-methods">
+    <button data-test-id="method-upi" onclick="showUPIForm()">UPI</button>
+    <button data-test-id="method-card" onclick="showCardForm()">Card</button>
+  </div>
+
+  <!-- UPI Form -->
+  <form data-test-id="upi-form" style="display:none">
+    <input
+      data-test-id="vpa-input"
+      type="text"
+      placeholder="username@bank"
+      required
+    />
+    <button data-test-id="pay-button" type="submit">Pay</button>
+  </form>
+
+  <!-- Card Form -->
+  <form data-test-id="card-form" style="display:none">
+    <input data-test-id="card-number-input" placeholder="Card Number" />
+    <input data-test-id="expiry-input" placeholder="MM/YY" />
+    <input data-test-id="cvv-input" placeholder="CVV" />
+    <input data-test-id="cardholder-name-input" placeholder="Name on Card" />
+    <button data-test-id="pay-button" type="submit">Pay</button>
+  </form>
+
+  <!-- Processing -->
+  <div data-test-id="processing-state" style="display:none">
+    <span data-test-id="processing-message">Processing payment...</span>
+  </div>
+
+  <!-- Success -->
+  <div data-test-id="success-state" style="display:none">
+    <h2>Payment Successful!</h2>
+    <div>
+      Payment ID:
+      <span data-test-id="payment-id"></span>
+    </div>
+    <span data-test-id="success-message">
+      Your payment has been processed successfully
+    </span>
+  </div>
+
+  <!-- Error -->
+  <div data-test-id="error-state" style="display:none">
+    <h2>Payment Failed</h2>
+    <span data-test-id="error-message">Payment could not be processed</span>
+    <button data-test-id="retry-button" onclick="location.reload()">Try Again</button>
+  </div>
+
+</div>
+
+<script src="checkout.js"></script>
+</body>
+</html>
